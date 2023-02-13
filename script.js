@@ -4,6 +4,7 @@ const endGameStatus = document.getElementById('endGameStatus');
 const playerOne = 'X';const playerTwo= '0';
 let playerTurn = playerOne;
 
+                                /*condition de fin de jeux*/
 const winningPatterns = 
 [
     [0, 1, 2],
@@ -19,7 +20,7 @@ const winningPatterns =
 cells.forEach(cell =>{
 cell.addEventListener('click' , playGame, {once:true});
 });
-
+                            /*conditions de jeux */
 function playGame(e) {
     e.target.innerHTML = playerTurn;
   
@@ -49,7 +50,7 @@ function playGame(e) {
     });
   }
 
-
+                        /*function pour affichage 0 ou x*/
 function updateGameStatus(status)
 {
     let statusText;
